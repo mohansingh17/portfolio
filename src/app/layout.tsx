@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Saira, Manrope } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter"
+});
+const saira = Saira(
+  {
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-saira",
+  },
+);
+const manrope = Manrope(
+  {
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-saira",
+  },
+);
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${saira.variable} ${inter.variable} ${manrope.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

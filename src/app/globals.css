@@ -66,6 +66,10 @@
   }
 }
 
+* {
+  font-family: var(--font-manrope);
+}
+
 /* @layer base {
   * {
     @apply border-border;

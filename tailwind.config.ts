@@ -30,11 +30,16 @@ const config = {
         //   DEFAULT: "hsl(var(--primary))",
         //   foreground: "hsl(var(--primary-foreground))",
         // },
-        primary: "#F603D0",
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        // primary: "#7F27FF",
+        // "dark-primary": "#C21292",
+        primary: "#0F2167",
+        "dark-primary": "#0F2167",
+        secondary: "#7F27FF",
+        "dark-secondary": "#7F27FF",
+        // secondary: {
+        //   DEFAULT: "hsl(var(--secondary))",
+        //   foreground: "hsl(var(--secondary-foreground))",
+        // },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -74,6 +79,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        manrope: ['var(--font-manrope)'],
+        saira: ['var(--font-saira)'],
       },
     },
   },
