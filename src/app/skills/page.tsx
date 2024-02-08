@@ -36,7 +36,7 @@ const SKILLS = [
 
 export default function page() {
     return (
-        <div className='p-5 flex items-center justify-center' style={{ height: "calc(100vh - 64px)" }}>
+        <div className='p-5 flex items-center justify-center screen-height'>
             <div className='flex items-center justify-center gap-5 flex-wrap'>
                 {
                     SKILLS.map((i) => {
