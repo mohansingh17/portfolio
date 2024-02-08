@@ -24,15 +24,15 @@ const LINKS = [
     },
 ]
 
-const menuItems = [
-    "Home",
-    "About",
-    "Skills",
-    "Projects",
-    "Education",
-    "Contact",
-    "Log Out",
-];
+// const menuItems = [
+//     "Home",
+//     "About",
+//     "Skills",
+//     "Projects",
+//     "Education",
+//     "Contact",
+//     "Log Out",
+// ];
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -71,13 +71,12 @@ export default function Header() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarMenu className="pt-5">
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={item} className="my-1">
+                {LINKS.map((i) => (
+                    <NavbarMenuItem key={i.id} className="my-1">
                         <Link
-                            className="w-full"
-                            href="#"
+                            className={`font-semibold px-3 py-2 rounded ${pathname === i.link ? "text-secondary" : "text-primary hover:text-secondary"}`} href={i.link}
                         >
-                            {item}
+                            {i.text}
                         </Link>
                     </NavbarMenuItem>
                 ))}
