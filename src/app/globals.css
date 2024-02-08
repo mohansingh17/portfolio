@@ -70,6 +70,10 @@
   font-family: var(--font-manrope);
 }
 
+body {
+  background: linear-gradient(270deg, rgb(27 20 41), rgb(20 15 35));
+}
+
 /* @layer base {
   * {
     @apply border-border;

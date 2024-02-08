@@ -33,9 +33,8 @@ const config = {
         // primary: "#7F27FF",
         // "dark-primary": "#C21292",
         primary: "#0F2167",
-        "dark-primary": "#0F2167",
         secondary: "#7F27FF",
-        "dark-secondary": "#7F27FF",
+        baseColor: "#EE9322",
         // secondary: {
         //   DEFAULT: "hsl(var(--secondary))",
         //   foreground: "hsl(var(--secondary-foreground))",
