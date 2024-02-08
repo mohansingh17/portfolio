@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation'
 const HeroBanner = () => {
     return (
         <div className='bg-black text-white h-screen relative' style={{ height: "calc(100vh - 64px)" }}>
-            <Image src="/images/hero.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2' />
+            <Image src="/images/hero-banner.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2' />
             <div className='flex flex-col gap-5 justify-center h-full md:pl-32 pl-5 relative'>
                 {/* <h4 className='text-3xl'>Hello, my name is</h4> */}
                 <h3 className='md:text-6xl text-4xl font-semibold'>I'm Mohan Singh</h3>
