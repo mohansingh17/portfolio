@@ -82,6 +82,7 @@ const config = {
       fontFamily: {
         manrope: ['var(--font-manrope)'],
         saira: ['var(--font-saira)'],
+        jost: ['var(--font-jost)'],
       },
     },
   },

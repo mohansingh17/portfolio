@@ -15,11 +15,11 @@ const ICONS = [
         icon: <FaLinkedinIn className='text-secondary group-hover:text-white transition-all text-xl' />,
     },
     {
-        id: 2,
+        id: 3,
         icon: <FaTwitter className='text-secondary group-hover:text-white transition-all text-xl' />,
     },
     {
-        id: 2,
+        id: 4,
         icon: <FaInstagram className='text-secondary group-hover:text-white transition-all text-xl' />,
     },
 ]
@@ -46,6 +46,7 @@ const HeroBanner = () => {
                 <div className='flex items-center gap-2.5 h-24'>
                     {/* <div className='text-4xl font-semibold'>And I'm a</div> */}
                     <TypeAnimation
+                        preRenderFirstString={true}
                         sequence={[
                             "Front End Developer",
                             1000,

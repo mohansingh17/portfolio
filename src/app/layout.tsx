@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Saira, Manrope } from "next/font/google";
+import { Inter, Saira, Manrope, Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -14,11 +14,18 @@ const saira = Saira(
     variable: "--font-saira",
   },
 );
+const jost = Jost(
+  {
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-jost",
+  },
+);
 const manrope = Manrope(
   {
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
-    variable: "--font-saira",
+    variable: "--font-manrope",
   },
 );
 
@@ -34,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${saira.variable} ${inter.variable} ${manrope.variable}`}>
+      <body className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable}`}>
         <Header />
         {children}
       </body>

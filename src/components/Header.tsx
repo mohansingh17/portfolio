@@ -37,21 +37,23 @@ const LINKS = [
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const pathname = usePathname();
+
+    console.log(isMenuOpen)
     return (
-        <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} className="">
+        <Navbar shouldHideOnScroll isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className="">
             <NavbarMenuToggle
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 className="sm:hidden"
             />
             <NavbarBrand>
-                <p className="font-bold text-3xl"> <span className="text-primary">Portfo</span><span className="text-secondary">lio</span> </p>
+                <p className="font-bold text-3xl font-jost"> <span className="text-primary">Portfo</span><span className="text-secondary">lio</span> </p>
             </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4 font-saira" justify="center">
+            <NavbarContent className="hidden sm:flex gap-4 font-jost" justify="center">
                 {
                     LINKS.map((i) => {
                         return (
-                            <NavbarItem key={i.id} className="">
-                                <Link className={`font-semibold px-3 py-2 rounded ${pathname === i.link ? "text-secondary" : "text-primary hover:text-secondary"}`} href={i.link}>
+                            <NavbarItem key={i.id} className="text-lg">
+                                <Link className={`font-medium px-3 py-2 rounded ${pathname === i.link ? "text-secondary" : "text-primary hover:text-secondary"}`} href={i.link}>
                                     {i.text}
                                 </Link>
                             </NavbarItem>
@@ -75,6 +77,7 @@ export default function Header() {
                     <NavbarMenuItem key={i.id} className="my-1">
                         <Link
                             className={`font-semibold px-3 py-2 rounded ${pathname === i.link ? "text-secondary" : "text-primary hover:text-secondary"}`} href={i.link}
+                            onClick={() => setIsMenuOpen(false)}
                         >
                             {i.text}
                         </Link>
