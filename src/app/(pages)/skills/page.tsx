@@ -36,8 +36,9 @@ const SKILLS = [
 
 export default function page() {
     return (
-        <div className='p-5 flex items-center justify-center min-h-custom-min-screen'>
-            <div className='flex items-center justify-center gap-5 flex-wrap'>
+        <div className='text-white md:h-custom-screen max-w-screen-xl mx-auto px-5 py-5 flex flex-col'>
+            <h2 className='font-jost text-center font-semibold text-4xl md:py-10 py-5 text-baseColor'>About Me</h2>
+            <div className='flex items-center justify-center gap-5 flex-wrap h-full'>
                 {
                     SKILLS.map((i) => {
                         return (
@@ -48,7 +49,6 @@ export default function page() {
                     })
                 }
             </div>
-
         </div>
     )
 }

@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation'
 export default function page() {
     return (
         <div className='text-white md:h-custom-screen max-w-screen-xl mx-auto px-5 py-5'>
-            <h2 className='font-jost text-center font-semibold text-4xl md:py-10 py-5'>About Me</h2>
+            <h2 className='font-jost text-center font-semibold text-4xl md:my-10 my-5 py-2 text-baseColor relative heading w-fit mx-auto'>About Me</h2>
             <div className='flex max-md:flex-col items-center gap-10 justify-between w-full'>
                 <div className='flex-1'>
                     <div className='flex items-center gap-2.5 h-24 font-jost'>

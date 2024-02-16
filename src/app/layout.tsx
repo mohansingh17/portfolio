@@ -3,6 +3,7 @@ import { Inter, Saira, Manrope, Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Head from "next/head";
+import Contact from "@/components/Contact";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <Head>
@@ -48,6 +51,7 @@ export default function RootLayout({
       <body className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable}`}>
         <Header />
         {children}
+        <Contact />
       </body>
     </html>
   );

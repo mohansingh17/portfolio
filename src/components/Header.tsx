@@ -69,7 +69,7 @@ export default function Header() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="">
-                    <a className="text-white bg-primary px-4 py-2 rounded" href="tel:9720125830">9720125830</a>
+                    <Link className="text-white bg-primary px-4 py-2 rounded" href="tel:+919720125830">+91-9720125830</Link>
                 </NavbarItem>
                 {/* <NavbarItem>
                     <Button as={Link} href="#" variant="flat">

@@ -26,10 +26,10 @@ const ICONS = [
 
 const HeroBanner = () => {
     return (
-        <div className='bg-black text-white relative h-custom-screen'>
-            <Image src="/images/hero-banner.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2 opacity-20' />
+        <div className='text-white relative md:h-custom-screen max-w-screen-xl mx-auto flex items-center gap-5 justify-between px-5 max-md:flex-col'>
+            {/* <Image src="/images/hero-banner.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2 opacity-20 hidden' /> */}
 
-            <div className='flex flex-col gap-5 justify-center h-full md:pl-32 pl-5 relative'>
+            <div className='flex flex-col gap-5 justify-center h-full max-md:py-8 max-md:w-full'>
                 <div className='flex items-center gap-5'>
                     {
                         ICONS.map((i) => {
@@ -62,6 +62,9 @@ const HeroBanner = () => {
                         repeat={Infinity}
                     />
                 </div>
+            </div>
+            <div>
+                <Image src="/images/mohan1.jpg" alt='' className='md:w-auto md:h-[70vh] w-full h-auto rounded-lg' height={200} width={200} />
             </div>
         </div>
     )
