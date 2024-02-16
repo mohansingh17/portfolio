@@ -36,7 +36,7 @@ const SKILLS = [
 
 export default function page() {
     return (
-        <div className='p-5 flex items-center justify-center screen-height'>
+        <div className='p-5 flex items-center justify-center min-h-custom-min-screen'>
             <div className='flex items-center justify-center gap-5 flex-wrap'>
                 {
                     SKILLS.map((i) => {

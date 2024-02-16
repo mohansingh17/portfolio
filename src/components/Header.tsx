@@ -22,6 +22,11 @@ const LINKS = [
         link: "/skills",
         text: "Skills"
     },
+    {
+        id: 4,
+        link: "/projects",
+        text: "Projects"
+    },
 ]
 
 // const menuItems = [
@@ -46,7 +51,7 @@ export default function Header() {
                 className="sm:hidden"
             />
             <NavbarBrand>
-                <p className="font-bold text-3xl font-jost"> <span className="text-primary">Portfo</span><span className="text-secondary">lio</span> </p>
+                <p className="font-bold md:text-3xl text-2xl font-jost"> <span className="text-primary">Portfo</span><span className="text-secondary">lio</span> </p>
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4 font-jost" justify="center">
                 {
@@ -63,14 +68,14 @@ export default function Header() {
 
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem className="hidden lg:flex">
-                    <Link href="#">Login</Link>
+                <NavbarItem className="">
+                    <a className="text-white bg-primary px-4 py-2 rounded" href="tel:9720125830">9720125830</a>
                 </NavbarItem>
-                <NavbarItem>
+                {/* <NavbarItem>
                     <Button as={Link} href="#" variant="flat">
                         Sign Up
                     </Button>
-                </NavbarItem>
+                </NavbarItem> */}
             </NavbarContent>
             <NavbarMenu className="pt-5">
                 {LINKS.map((i) => (

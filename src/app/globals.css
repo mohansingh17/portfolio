@@ -75,9 +75,9 @@ body {
   min-height: 100dvh;
 }
 
-.screen-height {
+/* .screen-height {
   height: calc(100dvh - 64px);
-}
+} */
 
 /* @layer base {
   * {

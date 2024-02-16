@@ -84,6 +84,12 @@ const config = {
         saira: ['var(--font-saira)'],
         jost: ['var(--font-jost)'],
       },
+      height: {
+        'custom-screen': 'calc(100vh - 64px)',
+      },
+      minHeight: {
+        'custom-min-screen': 'calc(100vh - 64px)'
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), nextui()],

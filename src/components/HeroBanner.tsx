@@ -26,7 +26,7 @@ const ICONS = [
 
 const HeroBanner = () => {
     return (
-        <div className='bg-black text-white relative screen-height'>
+        <div className='bg-black text-white relative h-custom-screen'>
             <Image src="/images/hero-banner.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2 opacity-20' />
 
             <div className='flex flex-col gap-5 justify-center h-full md:pl-32 pl-5 relative'>
