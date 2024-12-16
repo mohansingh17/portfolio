@@ -4,32 +4,27 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Head from "next/head";
 import Contact from "@/components/Contact";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-inter",
 });
-const saira = Saira(
-  {
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-saira",
-  },
-);
-const jost = Jost(
-  {
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-jost",
-  },
-);
-const manrope = Manrope(
-  {
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-manrope",
-  },
-);
+const saira = Saira({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-saira",
+});
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jost",
+});
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -41,15 +36,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
       <Head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable}`}>
+      <body
+        className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable}`}
+      >
         <Header />
+        <NextTopLoader color="#0F2167" showSpinner={false} />
         {children}
         <Contact />
       </body>
