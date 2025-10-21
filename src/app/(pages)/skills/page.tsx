@@ -1,54 +1,77 @@
-import React from 'react'
-import { FaBootstrap, FaCss3, FaHtml5, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from 'react-icons/io5';
-import { SiTailwindcss, SiTypescript } from 'react-icons/si';
+import React from "react";
 
-const SKILLS = [
-    {
-        id: 1,
-        icon: <FaHtml5 className='text-6xl text-white' />,
-    },
-    {
-        id: 2,
-        icon: <FaCss3 className='text-6xl text-white' />,
-    },
-    {
-        id: 3,
-        icon: <IoLogoJavascript className='text-6xl text-white' />,
-    },
-    {
-        id: 4,
-        icon: <FaReact className='text-6xl text-white' />,
-    },
-    {
-        id: 5,
-        icon: <SiTypescript className='text-6xl text-white' />,
-    },
-    {
-        id: 6,
-        icon: <SiTailwindcss className='text-6xl text-white' />,
-    },
-    {
-        id: 7,
-        icon: <FaBootstrap className='text-6xl text-white' />,
-    },
-]
+const CORE_SKILLS = [
+  {
+    title: "Frontend",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "JSX",
+      "React Router",
+      "Hooks",
+    ],
+  },
+  {
+    title: "State Management",
+    skills: ["Redux Toolkit", "Redux Saga", "React Hook Form"],
+  },
+  {
+    title: "Styling",
+    skills: [
+      "Tailwind CSS",
+      "Styled-components",
+      "Bootstrap",
+      "Hero UI",
+      "Figma-to-Webpage",
+    ],
+  },
+  {
+    title: "Tools & IDEs",
+    skills: ["VS Code", "Git/GitHub", "Postman", "JIRA", "Chrome DevTools"],
+  },
+  {
+    title: "APIs & Features",
+    skills: [
+      "REST API Integration",
+      "JWT",
+      "Session Management",
+      "SSR",
+      "WebSockets",
+    ],
+  },
+];
 
-export default function page() {
-    return (
-        <div className='text-white md:h-custom-screen max-w-screen-xl mx-auto px-5 py-5 flex flex-col'>
-            <h2 className='font-jost text-center font-semibold text-4xl md:py-10 py-5 text-baseColor'>About Me</h2>
-            <div className='flex items-center justify-center gap-5 flex-wrap h-full'>
-                {
-                    SKILLS.map((i) => {
-                        return (
-                            <div key={i.id} className='w-32 h-32 flex items-center justify-center border-2 border-secondary rounded-md p-4'>
-                                {i.icon}
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </div>
-    )
+export default function Skills() {
+  return (
+    <div className="text-white max-w-screen-xl mx-auto px-5 py-10">
+      <h2 className="font-jost text-center font-semibold text-4xl md:py-10 py-5 text-baseColor">
+        Skills
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {CORE_SKILLS.map((category, index) => (
+          <div
+            key={index}
+            className="border border-secondary rounded-xl p-6 hover:border-baseColor hover:shadow-baseColor/40 hover:shadow-lg transition-all duration-300"
+          >
+            <h3 className="text-xl font-semibold text-baseColor mb-4">
+              {category.title}
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {category.skills.map((skill, i) => (
+                <li
+                  key={i}
+                  className="px-3 py-1 bg-secondary/40 rounded-lg text-sm text-gray-300 transition-all duration-200"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
