@@ -1,63 +1,83 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaGithub, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaFileDownload,
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
-const ICONS = [
+const SOCIAL_ICONS = [
   {
     id: 1,
-    icon: (
-      <FaGithub className="text-secondary group-hover:text-white transition-all text-xl" />
-    ),
+    icon: <FaGithub />,
+    link: "https://github.com/mohansingh17",
+    label: "GitHub Profile",
   },
   {
     id: 2,
-    icon: (
-      <FaLinkedinIn className="text-secondary group-hover:text-white transition-all text-xl" />
-    ),
+    icon: <FaLinkedinIn />,
+    link: "https://www.linkedin.com/in/workformohan/",
+    label: "LinkedIn Profile",
   },
   {
     id: 3,
-    icon: (
-      <FaTwitter className="text-secondary group-hover:text-white transition-all text-xl" />
-    ),
+    icon: <BiLogoGmail />,
+    link: "mailto:workformohan17@gmail.com",
+    label: "Send Email",
   },
   {
     id: 4,
-    icon: (
-      <FaInstagram className="text-secondary group-hover:text-white transition-all text-xl" />
-    ),
+    icon: <FaTwitter />,
+    link: "https://x.com/mohan_1414",
+    label: "Twitter Profile",
   },
 ];
 
 const HeroBanner = () => {
   return (
-    <div className="text-white relative md:h-custom-screen max-w-screen-xl mx-auto flex items-center gap-5 justify-between px-5 max-md:flex-col">
-      {/* <Image src="/images/hero-banner.jpg" alt='mohan' height={200} width={200} className='h-full w-auto absolute top-0 left-1/2 -translate-x-1/2 opacity-20 hidden' /> */}
-
-      <div className="flex flex-col gap-5 justify-center h-full max-md:py-8 max-md:w-full">
-        <div className="flex items-center gap-5">
-          {ICONS.map((i) => {
-            return (
-              <span
-                key={i.id}
-                className="bg-[#FEFBF6] w-10 h-10 flex items-center justify-center rounded-full cursor-pointer hover:bg-secondary group transition-all"
-              >
-                {i.icon}
-              </span>
-            );
-          })}
+    <div
+      className="text-white relative md:h-custom-screen flex items-center justify-center px-5 max-md:flex-col"
+      style={{
+        backgroundImage: "url('/images/hero.jpg')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-5 justify-center max-md:py-14">
+        {/* Social Icons */}
+        <div className="flex items-center gap-4">
+          {SOCIAL_ICONS.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.label}
+              className="bg-[#FEFBF6] w-10 h-10 flex items-center justify-center rounded-full cursor-pointer hover:bg-secondary group transition-all"
+            >
+              {React.cloneElement(item.icon, {
+                className:
+                  "text-secondary group-hover:text-white transition-all text-xl",
+              })}
+            </a>
+          ))}
         </div>
-        <h5 className="md:text-3xl text-3xl font-semibold">Hi There!</h5>
-        <h3 className="md:text-5xl text-4xl font-semibold">
-          I'm <span className="text-baseColor">Mohan Singh</span>{" "}
+
+        {/* Greetings */}
+        <h5 className="md:text-3xl text-2xl font-semibold">Hi There!</h5>
+        <h3 className="md:text-5xl text-3xl font-semibold">
+          I'm <span className="text-baseColor">Mohan Singh</span>
         </h3>
+
+        {/* Type Animation */}
         <div className="flex items-center gap-2.5 h-24">
-          {/* <div className='text-4xl font-semibold'>And I'm a</div> */}
           <TypeAnimation
-            preRenderFirstString={true}
+            preRenderFirstString
             sequence={[
               "Front End Developer",
               1000,
@@ -69,21 +89,21 @@ const HeroBanner = () => {
               1000,
             ]}
             speed={50}
-            className="md:text-4xl text-3xl text-baseColor z-10 font-semibold border-2 border-baseColor pt-3 pb-5 px-5 rounded-md"
+            className="md:text-4xl text-2xl text-baseColor z-10 font-semibold border-2 border-baseColor pt-3 pb-5 px-5 rounded-md"
             repeat={Infinity}
           />
         </div>
-      </div>
-      <div>
-        <div>
-          <Image
-            src="/images/mohan4.jpg"
-            alt=""
-            priority
-            className="md:w-[25rem] md:h-[25rem] object-cover w-full h-auto rounded-full"
-            height={400}
-            width={400}
-          />
+
+        {/* Download Resume Button */}
+        <div className="mt-5">
+          <a
+            href="https://drive.google.com/file/d/1J3M26fPMCt9tJgROHNoaLKIje6z3fBQ1/view?usp=sharing" // Update with your resume path
+            target="_blank"
+            className="inline-flex items-center gap-2 bg-baseColor text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-baseColor border-2 border-baseColor transition-all"
+          >
+            <FaFileDownload className="text-lg" />
+            Resume
+          </a>
         </div>
       </div>
     </div>

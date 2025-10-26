@@ -43,7 +43,7 @@ export default function page() {
         <div className="flex-1 flex justify-end">
           <div>
             <Image
-              src="/images/mohan2.jpg"
+              src="/images/mohan4.jpg"
               priority
               className="rounded-full w-[28rem] aspect-square object-cover"
               alt="my-pic"

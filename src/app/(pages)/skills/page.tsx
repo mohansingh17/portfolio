@@ -1,6 +1,6 @@
 import React from "react";
 
-const CORE_SKILLS = [
+const SKILLS = [
   {
     title: "Frontend",
     skills: [
@@ -51,18 +51,18 @@ export default function Skills() {
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {CORE_SKILLS.map((category, index) => (
+        {SKILLS.map((category) => (
           <div
-            key={index}
-            className="border border-secondary rounded-xl p-6 hover:border-baseColor hover:shadow-baseColor/40 hover:shadow-lg transition-all duration-300"
+            key={category.title}
+            className="border rounded-xl p-6 border-baseColor shadow-baseColor/40 shadow-lg transition-all duration-300"
           >
             <h3 className="text-xl font-semibold text-baseColor mb-4">
               {category.title}
             </h3>
             <ul className="flex flex-wrap gap-2">
-              {category.skills.map((skill, i) => (
+              {category.skills.map((skill) => (
                 <li
-                  key={i}
+                  key={skill}
                   className="px-3 py-1 bg-secondary/40 rounded-lg text-sm text-gray-300 transition-all duration-200"
                 >
                   {skill}

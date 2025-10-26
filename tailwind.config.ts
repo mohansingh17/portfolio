@@ -1,5 +1,5 @@
-import { nextui } from "@nextui-org/react"
-import type { Config } from "tailwindcss"
+import { nextui } from "@nextui-org/react";
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -30,11 +30,6 @@ const config = {
         //   DEFAULT: "hsl(var(--primary))",
         //   foreground: "hsl(var(--primary-foreground))",
         // },
-        // primary: "#7F27FF",
-        // "dark-primary": "#C21292",
-        // primary: "#0F2167",
-        // secondary: "#7F27FF",
-        // baseColor: "#EE9322",
         primary: "#0F2167",
         secondary: "#7F27FF",
         baseColor: "#EE9322",
@@ -83,19 +78,19 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        manrope: ['var(--font-manrope)'],
-        saira: ['var(--font-saira)'],
-        jost: ['var(--font-jost)'],
+        manrope: ["var(--font-manrope)"],
+        saira: ["var(--font-saira)"],
+        jost: ["var(--font-jost)"],
       },
       height: {
-        'custom-screen': 'calc(100vh - 64px)',
+        "custom-screen": "calc(100vh - 64px)",
       },
       minHeight: {
-        'custom-min-screen': 'calc(100vh - 64px)'
-      }
+        "custom-min-screen": "calc(100vh - 64px)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), nextui()],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

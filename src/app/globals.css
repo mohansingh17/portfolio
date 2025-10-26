@@ -83,7 +83,7 @@ body {
   width: 50%;
   height: 3px;
   border-radius: 10px;
-  background-color: #7F27FF;
+  background-color: #7f27ff;
 }
 
 .heading::after {
@@ -94,7 +94,7 @@ body {
   width: 50%;
   height: 3px;
   border-radius: 10px;
-  background-color: #7F27FF;
+  background-color: #7f27ff;
 }
 
 /* .screen-height {
