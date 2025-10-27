@@ -10,6 +10,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import Link from "next/link";
 
 const SOCIAL_ICONS = [
   {
@@ -141,14 +142,14 @@ const HeroBanner = () => {
 
         {/* Download Resume Button */}
         <motion.div className="mt-5" variants={itemVariants}>
-          <a
+          <Link
             href="https://drive.google.com/file/d/1J3M26fPMCt9tJgROHNoaLKIje6z3fBQ1/view?usp=sharing"
             target="_blank"
-            className="inline-flex items-center gap-2 bg-baseColor text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-baseColor border-2 border-baseColor transition-all"
+            className="inline-flex items-center gap-2 bg-baseColor text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-baseColor border-2 border-baseColor transition-all"
           >
             <FaFileDownload className="text-lg" />
             Resume
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </div>

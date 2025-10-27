@@ -85,7 +85,7 @@ export default function Header() {
       <NavbarContent justify="end">
         <NavbarItem className="">
           <Link
-            className="text-white bg-primary px-4 py-2 rounded"
+            className="text-white bg-primary hover:bg-white hover:text-primary border-2 border-primary transition-all font-medium px-4 py-2 rounded"
             href="tel:+919720125830"
           >
             +91-9720125830
