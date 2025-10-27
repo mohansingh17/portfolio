@@ -58,6 +58,9 @@ export default function Header() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className=""
+      classNames={{
+        wrapper: "max-w-[1400px] px-8",
+      }}
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}

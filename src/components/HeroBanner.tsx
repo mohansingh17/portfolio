@@ -40,7 +40,7 @@ const SOCIAL_ICONS = [
 const HeroBanner = () => {
   return (
     <div
-      className="text-white relative md:h-custom-screen flex items-center justify-center px-5 max-md:flex-col"
+      className="text-white md:h-custom-screen flex items-center justify-center max-md:flex-col"
       style={{
         backgroundImage: "url('/images/banner.jpg')",
         backgroundRepeat: "no-repeat",
@@ -48,7 +48,7 @@ const HeroBanner = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col gap-5 justify-center max-md:py-14">
+      <div className="container flex flex-col gap-5 justify-center">
         {/* Social Icons */}
         <div className="flex items-center gap-4">
           {SOCIAL_ICONS.map((item) => (

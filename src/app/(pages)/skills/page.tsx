@@ -45,10 +45,8 @@ const SKILLS = [
 
 export default function Skills() {
   return (
-    <div className="text-white max-w-screen-xl mx-auto px-5 py-10">
-      <h2 className="font-jost text-center font-semibold text-4xl md:py-10 py-5 text-baseColor">
-        Skills
-      </h2>
+    <div className="container">
+      <h2 className="heading">Skills</h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {SKILLS.map((category) => (

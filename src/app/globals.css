@@ -75,6 +75,14 @@ body {
   min-height: 100dvh;
 }
 
+/* globals.css */
+.container {
+  @apply text-white my-12;
+}
+.heading {
+  @apply font-jost text-center font-semibold text-4xl md:mb-10 mb-8 py-2 text-baseColor relative w-fit mx-auto;
+}
+
 .heading::before {
   content: "";
   position: absolute;
@@ -96,17 +104,3 @@ body {
   border-radius: 10px;
   background-color: #7f27ff;
 }
-
-/* .screen-height {
-  height: calc(100dvh - 64px);
-} */
-
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-} */

@@ -3,10 +3,8 @@ import React from "react";
 export default function Contact() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto text-white py-10 px-5">
-        <h2 className="font-jost text-center font-semibold text-4xl my-10 py-2 text-baseColor relative heading w-fit mx-auto">
-          Contact Me
-        </h2>
+      <div className="container">
+        <h2 className="heading">Contact Me</h2>
 
         <div className="flex gap-10 justify-between max-md:flex-col">
           {/* Left Side: Contact Info */}
