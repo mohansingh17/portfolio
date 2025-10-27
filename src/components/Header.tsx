@@ -6,14 +6,12 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Button,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
 
 const LINKS = [
   {
@@ -37,16 +35,6 @@ const LINKS = [
     text: "Projects",
   },
 ];
-
-// const menuItems = [
-//     "Home",
-//     "About",
-//     "Skills",
-//     "Projects",
-//     "Education",
-//     "Contact",
-//     "Log Out",
-// ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -103,11 +91,6 @@ export default function Header() {
             +91-9720125830
           </Link>
         </NavbarItem>
-        {/* <NavbarItem>
-                    <Button as={Link} href="#" variant="flat">
-                        Sign Up
-                    </Button>
-                </NavbarItem> */}
       </NavbarContent>
       <NavbarMenu className="pt-5">
         {LINKS.map((i) => (

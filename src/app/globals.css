@@ -66,6 +66,13 @@
   }
 }
 
+:root {
+  --primary: #0f2167;
+  --secondary: #7f27ff;
+  --baseColor: #ee9322;
+  --light: #fefbf6;
+}
+
 * {
   font-family: var(--font-inter);
 }
