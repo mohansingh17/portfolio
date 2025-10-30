@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Head from "next/head";
 import Contact from "@/components/Contact";
 import NextTopLoader from "nextjs-toploader";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,10 +43,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body
-        className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable}`}
+        className={`${saira.variable} ${inter.variable} ${manrope.variable} ${jost.variable} relative bg-[#0a0a0a] text-white overflow-x-hidden`}
       >
         <Header />
         <NextTopLoader color="#0F2167" showSpinner={false} />
+        <ParticleBackground />
         {children}
         <Contact />
       </body>
