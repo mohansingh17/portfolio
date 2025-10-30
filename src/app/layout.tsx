@@ -6,6 +6,7 @@ import Head from "next/head";
 import Contact from "@/components/Contact";
 import NextTopLoader from "nextjs-toploader";
 import ParticleBackground from "@/components/ParticleBackground";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,6 +39,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const userAgent = headers().get("user-agent") || "";
+
+  const isMobileOrTablet = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(
+    userAgent
+  );
+
   return (
     <html lang="en">
       <Head>
@@ -48,7 +55,7 @@ export default function RootLayout({
       >
         <Header />
         <NextTopLoader color="#0F2167" showSpinner={false} />
-        <ParticleBackground />
+        {!isMobileOrTablet && <ParticleBackground />}
         {children}
         <Contact />
       </body>
