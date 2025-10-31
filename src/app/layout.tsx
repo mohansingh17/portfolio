@@ -61,6 +61,7 @@ export default function RootLayout({
         {!isMobileOrTablet && <ParticleBackground />}
         {children}
         <Contact />
+        {userAgent}
       </body>
     </html>
   );
