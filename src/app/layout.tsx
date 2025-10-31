@@ -41,9 +41,12 @@ export default function RootLayout({
 }>) {
   const userAgent = headers().get("user-agent") || "";
 
-  const isMobileOrTablet = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(
-    userAgent
-  );
+  // const isMobileOrTablet = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(
+  //   userAgent
+  // );
+
+  const isMobileOrTablet =
+    /Android(?!.*Mobile)|iPad|Tablet|Mobi|iPhone|iPod/i.test(userAgent);
 
   return (
     <html lang="en">
