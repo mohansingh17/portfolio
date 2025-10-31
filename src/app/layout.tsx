@@ -61,7 +61,7 @@ export default function RootLayout({
         {!isMobileOrTablet && <ParticleBackground />}
         {children}
         <Contact />
-        {userAgent}
+        <div className="text-center">{userAgent}</div>
       </body>
     </html>
   );
