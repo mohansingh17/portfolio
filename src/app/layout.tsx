@@ -41,12 +41,9 @@ export default function RootLayout({
 }>) {
   const userAgent = headers().get("user-agent") || "";
 
-  // const isMobileOrTablet = /Mobi|Mobile|Android|iPhone|iPad|iPod|Tablet/i.test(
-  //   userAgent
-  // );
-
-  const isMobileOrTablet =
-    /iPhone|iPad|iPod|Android(?!.*Mobile)|Mobile|Tablet/i.test(userAgent);
+  const isMobileOrTablet = /Mobi|Mobile|Android|iPhone|iPad|iPod|Tablet/i.test(
+    userAgent
+  );
 
   return (
     <html lang="en">
@@ -61,7 +58,6 @@ export default function RootLayout({
         {!isMobileOrTablet && <ParticleBackground />}
         {children}
         <Contact />
-        <div className="text-center">{userAgent}</div>
       </body>
     </html>
   );
