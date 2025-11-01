@@ -39,11 +39,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const userAgent = headers().get("user-agent") || "";
+  // const userAgent = headers().get("user-agent") || "";
 
-  const isMobileOrTablet = /Mobi|Mobile|Android|iPhone|iPad|iPod|Tablet/i.test(
-    userAgent
-  );
+  // const isMobileOrTablet = /Mobi|Mobile|Android|iPhone|iPad|iPod|Tablet/i.test(
+  //   userAgent
+  // );
 
   return (
     <html lang="en">
@@ -55,7 +55,7 @@ export default function RootLayout({
       >
         <Header />
         <NextTopLoader color="#0F2167" showSpinner={false} />
-        {!isMobileOrTablet && <ParticleBackground />}
+        <ParticleBackground />
         {children}
         <Contact />
       </body>

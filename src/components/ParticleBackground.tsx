@@ -77,7 +77,7 @@ const ParticleBackground = () => {
             blink: false,
           },
           shadow: {
-            enable: true,
+            enable: false,
             color: "#D3DAD9",
             blur: 2,
           },
