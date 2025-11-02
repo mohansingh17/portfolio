@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -12,6 +12,7 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const LINKS = [
   {
@@ -37,7 +38,7 @@ const LINKS = [
 ];
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -47,12 +48,45 @@ export default function Header() {
       onMenuOpenChange={setIsMenuOpen}
       className=""
       classNames={{
-        wrapper: "max-w-[1400px] px-8",
+        wrapper: "max-w-[1400px] sm:px-8 px-5",
       }}
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
+        icon={
+          <div className="relative w-7 h-[18px] flex flex-col justify-between items-center">
+            {/* Top line */}
+            <motion.span
+              className="block w-7 h-[2px] bg-primary rounded-full origin-center"
+              animate={{
+                rotate: isMenuOpen ? 45 : 0,
+                y: isMenuOpen ? 8 : 0,
+              }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            />
+
+            {/* Middle line */}
+            <motion.span
+              className="block w-7 h-[2px] bg-primary rounded-full"
+              animate={{
+                opacity: isMenuOpen ? 0 : 1,
+                x: isMenuOpen ? 15 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+            />
+
+            {/* Bottom line */}
+            <motion.span
+              className="block w-7 h-[2px] bg-primary rounded-full origin-center"
+              animate={{
+                rotate: isMenuOpen ? -45 : 0,
+                y: isMenuOpen ? -8 : 0,
+              }}
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            />
+          </div>
+        }
+        className="sm:hidden text-primary [&>svg]:stroke-[2.5]"
       />
       <NavbarBrand>
         <p className="font-bold md:text-3xl text-2xl font-jost">
